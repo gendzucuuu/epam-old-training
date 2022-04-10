@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/papers"
+        xmlns:tns="http://www.example.com/papers"
+        elementFormDefault="qualified">
+
+    <element name="papers">
+        <complexType>
+            <sequence>
+                <element ref="tns:paper"
+                         minOccurs="16"
+                         maxOccurs="unbounded" />
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="paper" type="tns:Paper" abstract="true"/>
+    <element name="newspaper" type="tns:Newspaper" substitutionGroup="tns:paper"/>
+    <element name="journal" type="tns:Journal" substitutionGroup="tns:paper"/>
+    <element name="booklet" type="tns:Booklet" substitutionGroup="tns:paper"/>
+
+    <complexType name="Paper">
+        <sequence>
+            <element name="monthly" type="boolean" default="false"/>
+            <element name="colored" type="boolean" default="false"/>
+            <element name="volume" type="positiveInteger"/>
+            <element name="glossy" type="boolean"/>
+        </sequence>
+        <attribute name="id" type="positiveInteger" use="required"/>
+        <attribute name="title" type="tns:Title" use="optional" default="Title"/>
+    </complexType>
+
+    <complexType name="Newspaper">
+        <complexContent>
+            <extension base="tns:Paper">
+                <sequence>
+                    <element name="subscription-index" type="tns:Subscription-index"/>
+                    <element name="newspaper-type" type="tns:Newspaper-type"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="Journal">
+        <complexContent>
+            <extension base="tns:Paper">
+                <sequence>
+                    <element name="subscription-index" type="tns:Subscription-index"/>
+                    <element name="journal-type" type="tns:Journal-type"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="Booklet">
+        <complexContent>
+            <extension base="tns:Paper">
+                <sequence>
+                    <element name="name-of-company" type="string"/>
+                    <element name="booklet-type" type="tns:Booklet-type"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <simpleType name="Title">
+        <restriction base="string">
+            <pattern value="[A-Z][a-z\s0-9]{0,50}"/>
+        </restriction>
+    </simpleType>
+
+    <!--<simpleType name="Monthly">-->
+        <!--<restriction base="string">-->
+            <!--<enumeration value="true"/>-->
+            <!--<enumeration value="false"/>-->
+        <!--</restriction>-->
+    <!--</simpleType>-->
+
+    <!--<simpleType name="Colored">-->
+        <!--<restriction base="string">-->
+            <!--<enumeration value="true"/>-->
+            <!--<enumeration value="false"/>-->
+        <!--</restriction>-->
+    <!--</simpleType>-->
+
+    <!--<simpleType name="Glossy">-->
+        <!--<restriction base="string">-->
+            <!--<enumeration value="true"/>-->
+            <!--<enumeration value="false"/>-->
+        <!--</restriction>-->
+    <!--</simpleType>-->
+
+    <!--<simpleType name="Volume">-->
+        <!--<restriction base="string">-->
+            <!--<pattern value="([1-9])|([1-9][0-9]+)"/>-->
+        <!--</restriction>-->
+    <!--</simpleType>-->
+
+    <simpleType name="Subscription-index">
+        <restriction base="string">
+            <pattern value="[0-9]{3}"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Newspaper-type">
+        <restriction base="string">
+            <enumeration value="General political newspaper"/>
+            <enumeration value="Specialized newspaper"/>
+            <enumeration value="Special newspaper issue"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Booklet-type">
+        <restriction base="string">
+            <enumeration value="One-fold booklet"/>
+            <enumeration value="Duplex booklet"/>
+            <enumeration value="Three-fold booklet"/>
+            <enumeration value="Four-fold booklet"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Journal-type">
+        <restriction base="string">
+            <enumeration value="Social magazine"/>
+            <enumeration value="Science magazine"/>
+            <enumeration value="Production and practical magazine"/>
+            <enumeration value="Popular magazine"/>
+            <enumeration value="Review magazine"/>
+        </restriction>
+    </simpleType>
+
+</schema>

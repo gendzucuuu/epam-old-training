@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<papers
+        xsi:schemaLocation="http://www.example.com/papers papers.xsd"
+        xmlns="http://www.example.com/papers"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <newspaper id="1" title="Political news">
+        <monthly>true</monthly>
+        <colored>false</colored>
+        <volume>7</volume>
+        <glossy>false</glossy>
+        <subscription-index>123</subscription-index>
+        <newspaper-type>General political newspaper</newspaper-type>
+    </newspaper>
+
+    <newspaper id="2" title="Special news">
+        <monthly>false</monthly>
+        <colored>false</colored>
+        <volume>10</volume>
+        <glossy>false</glossy>
+        <subscription-index>124</subscription-index>
+        <newspaper-type>Special newspaper issue</newspaper-type>
+    </newspaper>
+
+    <newspaper id="3" title="General political news">
+        <monthly>true</monthly>
+        <colored>false</colored>
+        <volume>7</volume>
+        <glossy>false</glossy>
+        <subscription-index>128</subscription-index>
+        <newspaper-type>General political newspaper</newspaper-type>
+    </newspaper>
+
+    <newspaper id="4" title="Specialized news">
+        <monthly>true</monthly>
+        <colored>false</colored>
+        <volume>8</volume>
+        <glossy>false</glossy>
+        <subscription-index>125</subscription-index>
+        <newspaper-type>Specialized newspaper</newspaper-type>
+    </newspaper>
+
+    <newspaper id="5" title="Specialized news of week">
+        <monthly>false</monthly>
+        <colored>false</colored>
+        <volume>12</volume>
+        <glossy>false</glossy>
+        <subscription-index>126</subscription-index>
+        <newspaper-type>Specialized newspaper</newspaper-type>
+    </newspaper>
+
+    <journal id="6" >
+        <monthly>true</monthly>
+        <colored>true</colored>
+        <volume>20</volume>
+        <glossy>true</glossy>
+        <subscription-index>231</subscription-index>
+        <journal-type>Social magazine</journal-type>
+    </journal>
+
+    <journal id="7" title="Popular news">
+        <monthly>false</monthly>
+        <colored>true</colored>
+        <volume>22</volume>
+        <glossy>true</glossy>
+        <subscription-index>233</subscription-index>
+        <journal-type>Popular magazine</journal-type>
+    </journal>
+
+    <journal id="8" >
+        <monthly>true</monthly>
+        <colored>true</colored>
+        <volume>20</volume>
+        <glossy>true</glossy>
+        <subscription-index>235</subscription-index>
+        <journal-type>Science magazine</journal-type>
+    </journal>
+
+    <journal id="9" title="Social news of month">
+        <monthly>true</monthly>
+        <colored>true</colored>
+        <volume>20</volume>
+        <glossy>true</glossy>
+        <subscription-index>232</subscription-index>
+        <journal-type>Social magazine</journal-type>
+    </journal>
+
+    <journal id="10" >
+        <monthly>false</monthly>
+        <colored>true</colored>
+        <volume>30</volume>
+        <glossy>true</glossy>
+        <subscription-index>236</subscription-index>
+        <journal-type>Production and practical magazine</journal-type>
+    </journal>
+
+    <journal id="11" title="Review of month">
+        <monthly>true</monthly>
+        <colored>true</colored>
+        <volume>20</volume>
+        <glossy>true</glossy>
+        <subscription-index>237</subscription-index>
+        <journal-type>Review magazine</journal-type>
+    </journal>
+
+    <booklet id="12" title="Discount in euroopt">
+        <monthly>true</monthly>
+        <colored>true</colored>
+        <volume>2</volume>
+        <glossy>true</glossy>
+        <name-of-company>Euroopt</name-of-company>
+        <booklet-type>Duplex booklet</booklet-type>
+    </booklet>
+
+    <booklet id="13" >
+        <monthly>true</monthly>
+        <colored>true</colored>
+        <volume>1</volume>
+        <glossy>true</glossy>
+        <name-of-company>BNTU</name-of-company>
+        <booklet-type>One-fold booklet</booklet-type>
+    </booklet>
+
+    <booklet id="14" title="Discount in belmarket">
+        <monthly>true</monthly>
+        <colored>true</colored>
+        <volume>3</volume>
+        <glossy>true</glossy>
+        <name-of-company>Belmarket</name-of-company>
+        <booklet-type>Three-fold booklet</booklet-type>
+    </booklet>
+
+    <booklet id="15" >
+        <monthly>false</monthly>
+        <colored>true</colored>
+        <volume>4</volume>
+        <glossy>true</glossy>
+        <name-of-company>Stroitelstvo BLR</name-of-company>
+        <booklet-type>Four-fold booklet</booklet-type>
+    </booklet>
+
+    <booklet id="16" title="Training in epam">
+        <monthly>false</monthly>
+        <colored>true</colored>
+        <volume>4</volume>
+        <glossy>true</glossy>
+        <name-of-company>EPAM</name-of-company>
+        <booklet-type>Four-fold booklet</booklet-type>
+    </booklet>
+
+</papers>
